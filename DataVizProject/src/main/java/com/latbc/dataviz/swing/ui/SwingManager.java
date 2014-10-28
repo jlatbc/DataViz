@@ -23,5 +23,9 @@ public class SwingManager {
         
 //        PantallaFileChooser pFileChooser = new PantallaFileChooser();
 //        pFileChooser.setVisible(true);
+    		
+    	SelectionMenu sm = new SelectionMenu();
+    	sm.setVisible(true);
+
     }
 }

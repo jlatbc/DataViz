@@ -11,7 +11,7 @@ public class PropertyValues {
 		
 		String result = "";
 		Properties prop = new Properties();
-		String propFile = "/src/main/resources/config.properties";
+		String propFile = "src/main/resources/config.properties";
 		
 		InputStream inputStream = new FileInputStream(propFile);
 
