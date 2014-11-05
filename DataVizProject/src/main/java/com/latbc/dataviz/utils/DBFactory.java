@@ -5,7 +5,14 @@ import org.slf4j.LoggerFactory;
 
 
 
+
+
+
 import com.latbc.dataviz.connection.impl.MySQLDBImpl;
+
+
+import com.latbc.dataviz.connection.impl.OracleDBImpl;
+import com.latbc.dataviz.connection.impl.SQLServerImpl;
 
 import java.sql.SQLException;
 import java.sql.Connection;
@@ -18,14 +25,18 @@ public class DBFactory {
 
     public ConnectorDB getConnection(String connectorDBType) throws SQLException{
 
-        if (connectorDBType == null) {
-            LOGGER.info("connectorDBType is Null");
-            return null;
-        } else if (connectorDBType.equalsIgnoreCase("MySQL")) {
-            System.out.println("Connection created");
-            return new MySQLDBImpl();
-        }
-
+		if (connectorDBType == null){
+			System.out.println("connectorDBType is Null");
+			return null;
+		} else if (connectorDBType.equalsIgnoreCase(ConstantsDataViz.DB_MYSQL)){
+			return new MySQLDBImpl();
+		} else if (connectorDBType.equalsIgnoreCase(ConstantsDataViz.DB_ORACLE)){
+			return new OracleDBImpl();
+		} else if (connectorDBType.equalsIgnoreCase(ConstantsDataViz.DB_SQL_SERVER)){
+			return new SQLServerImpl();
+		} else {
+			System.out.println(" Falta crear mensaje en DBFactory para el ELSE ");
+		}
         return null;
     }
 

@@ -11,6 +11,6 @@ public interface ConnectorDB {
 	
 	void closeConnection()  throws SQLException ;
         
-        void createConnection(ConnectionBean connectionBean) throws SQLException;
+    void createConnection(ConnectionBean connectionBean) throws SQLException;
 	
 }

@@ -20,7 +20,7 @@ public class JsonEngine {
 			throws IOException {
 
 		File file = new File(
-				"C:/Users/Latbc/Desktop/test_folder/testOutJsonFromDataBase.json");
+				"C:/DataVizTestContainer/json/testExtraction.json");
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 
@@ -82,7 +82,7 @@ public class JsonEngine {
 
 							// Si el campo viene pone la etiqueta CAMPO-VACIO
 							columnMap.put(metaData.getColumnLabel(columnIndex),
-									"CAMPO-VACIO");
+									"EMPTY-FIELD");
 						}
 					}
 					list.add(columnMap);

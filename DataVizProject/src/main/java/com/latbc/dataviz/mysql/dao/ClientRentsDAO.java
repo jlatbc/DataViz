@@ -1,6 +1,5 @@
 package com.latbc.dataviz.mysql.dao;
 
-import java.io.FileNotFoundException;
 import java.sql.SQLException;
 
 import com.latbc.dataviz.exceptions.DatabaseConnectionException;
