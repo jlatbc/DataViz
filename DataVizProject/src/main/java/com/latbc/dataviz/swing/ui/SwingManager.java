@@ -18,14 +18,14 @@ public class SwingManager {
 //        String outputPath = "C:/Users/Latbc/Desktop/test_folder/excel2.json";
 //        excelEngine.getJSONFromExcelFile(rootPathXLS , outputPath);
 
-//    	  PantallaQuery pQuery = new PantallaQuery();
-//    	  pQuery.setVisible(true);
+    	  PantallaQuery pQuery = new PantallaQuery();
+    	  pQuery.setVisible(true);
         
 //        PantallaFileChooser pFileChooser = new PantallaFileChooser();
 //        pFileChooser.setVisible(true);
     		
-    	SelectionMenu sm = new SelectionMenu();
-    	sm.setVisible(true);
+//    	SelectionMenu sm = new SelectionMenu();
+//    	sm.setVisible(true);
 
     }
 }

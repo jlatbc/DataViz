@@ -215,10 +215,11 @@ public class PantallaConexion extends javax.swing.JFrame {
             LOGGER.debug("Error: " + ex);
         }
 
-//        if (connectionBean.getUser() != null && connectionBean.getUrl() != null && connectionBean.getPassword() != null) {
-//            PantallaQuery pantallaQuery = new PantallaQuery();
-//            pantallaQuery.setVisible(true);
-//        }
+        if (connectionBean.getUser() != null && connectionBean.getUrl() != null && connectionBean.getPassword() != null) {
+            PantallaQuery pantallaQuery = new PantallaQuery();
+            pantallaQuery.setVisible(true);
+            this.dispose();
+        }
 
 //        pantallaPrueba.setVisible(true);
 
