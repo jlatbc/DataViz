@@ -42,7 +42,7 @@ public class MySQLDBImpl implements ConnectorDB {
 	public Connection getConnection() throws SQLException {
 
 		try {
-			prop.load(new FileInputStream("src//main//resources//config.properties"));
+			prop.load(new FileInputStream("C:\\config.properties"));
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

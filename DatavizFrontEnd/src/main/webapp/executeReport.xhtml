@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<h:head>
+	<title>Reportes Base de Datos</title>
+	</h:head>
+	<h:body>
+		<h:form>
+			<p:panelGrid columns="2">
+				
+				<h:outputText value="REPORTES-JSON"/>
+				<h:outputText value=""/>
+				
+				<h:outputText value="Reporte Clientes Activos"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;"
+						action="#{executeReport.runReportGetActiveInactiveClient()}"/>
+				
+				<h:outputText value="Reporte Consumo Promedio por Ciudad, Categoria y mes"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						action="#{executeReport.runReportGetAVGRentByCityCategoryAndMonth()}"/>
+		
+				<h:outputText value="Reporte Top 10 Peilculas Rentadas"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						 action="#{executeReport.runReportGetRentTopTen()}"/>
+				
+				<h:outputText value="Reporte Top 10 Clientes Consumo"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						 action="#{executeReport.runReportGetClientByTopTenRent()}"/>
+				
+				<h:outputText value="Reporte Clientes con mas de una renta por semana"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						 action="#{executeReport.runReportGetClientRentsPerWeek()}"/>		
+		
+				<h:outputText value="Reporte Ingresos generados por categoria"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						 action="#{executeReport.runReportGetEntryByCategory()}"/>
+				
+				<h:outputText value="Reporte Peliculas rentadas por genero y mes"/>
+				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
+						 action="#{executeReport.runReportGetMoviesByGenereAndMonth()}"/>
+			
+			</p:panelGrid>
+		</h:form>	
+	</h:body>
+
+</html>

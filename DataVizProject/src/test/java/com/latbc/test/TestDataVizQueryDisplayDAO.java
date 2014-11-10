@@ -13,13 +13,13 @@ public class TestDataVizQueryDisplayDAO {
 		//Execute test, creating json file
 		try {
 			
-			//dataVizQuery.getActiveAndInactiveClientByCity("", "");
+			dataVizQuery.getActiveAndInactiveClientByCity("", "");
 			//dataVizQuery.getAVGRentByCityCategoryAndMonth();
 			//dataVizQuery.getRentTopTen();
 			//dataVizQuery.getClientByTopTenRent();
 			//dataVizQuery.getClientRentsPerWeek();
 			//dataVizQuery.getEntryByCategory();
-			dataVizQuery.getMoviesByGenereAndMonth();
+			//dataVizQuery.getMoviesByGenereAndMonth();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
