@@ -20,7 +20,7 @@ public class JsonEngine {
 			throws IOException {
 
 		File file = new File(
-				"C:/DataVizTestContainer/json/testExtraction.json");
+				"C:/DataVizTestContainer/json/"+ keyName+".json");
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 
