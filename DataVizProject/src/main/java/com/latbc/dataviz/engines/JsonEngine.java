@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,8 +21,17 @@ public class JsonEngine {
 	public void createJsonFile(ResultSet resultSet, String keyName)
 			throws IOException {
 
+		Date currentDate;
+		String creationDate;
+		
+		SimpleDateFormat dateTimeFormat = new SimpleDateFormat("ddMMyyyy");
+		currentDate = new Date();
+		creationDate = dateTimeFormat.format(currentDate);
+
+		System.out.println(creationDate);
+	
 		File file = new File(
-				"C:/DataVizTestContainer/json/"+ keyName+".json");
+				"C:/DataVizTestContainer/json/"+ keyName + "_" + creationDate + ".json");
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 
@@ -38,7 +49,7 @@ public class JsonEngine {
 			bw.flush();
 			bw.close();
 
-			System.out.println("File Created with BufferedWriter");
+			System.out.println("File Created with the name " + keyName + "_" + creationDate + ".json");
 
 		} catch (IOException e) {
 			e.printStackTrace();
