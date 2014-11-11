@@ -1,4 +1,4 @@
-package com.latbc.datavizfrontend.gui;
+package com.latbc.datavizfrontend.managedbean;
 
 import java.sql.SQLException;
 
@@ -9,7 +9,7 @@ import com.latbc.dataviz.mysql.dao.impl.DataVizQueryDisplayDAOImpl;
 
 
 @ManagedBean
-public class ExecuteReport {
+public class ExecuteReportManagedBean {
 
 	public void runReportGetActiveInactiveClient(){
 		
