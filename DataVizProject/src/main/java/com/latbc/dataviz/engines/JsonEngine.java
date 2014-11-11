@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,9 +20,16 @@ public class JsonEngine {
 
 	public void createJsonFile(ResultSet resultSet, String keyName)
 			throws IOException {
+		
+			
+		  Timestamp stamp = new Timestamp(System.currentTimeMillis());
+		  Date date = new Date(stamp.getTime());
+		
+		  String dateString = date.toString();
+		
 
 		File file = new File(
-				"C:/DataVizTestContainer/json/"+ keyName+".json");
+				"C:/DataVizTestContainer/json/"+ keyName+"_"+dateString+".json");
 		FileWriter fw = null;
 		BufferedWriter bw = null;
 
@@ -54,7 +63,7 @@ public class JsonEngine {
 	}
 
 	private String getJSONFromResultSet(ResultSet rs, String keyName) {
-
+		
 		Map<String, Object> json = new HashMap<String, Object>();
 		List<Object> list = new ArrayList<Object>();
 
@@ -63,7 +72,7 @@ public class JsonEngine {
 			try {
 
 				ResultSetMetaData metaData = rs.getMetaData();
-
+				
 				while (rs.next()) {
 
 					Map<String, Object> columnMap = new HashMap<String, Object>();
