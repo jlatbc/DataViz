@@ -1,4 +1,4 @@
-package com.latbc.test;
+package com.latbc.dataviz.test;
 
 import java.sql.SQLException;
 import com.latbc.dataviz.exceptions.DatabaseConnectionException;

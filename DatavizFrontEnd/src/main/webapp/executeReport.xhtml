@@ -17,31 +17,31 @@
 				
 				<h:outputText value="Reporte Clientes Activos"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;"
-						action="#{executeReport.runReportGetActiveInactiveClient()}"/>
+						action="#{executeReportManagedBean.runReportGetActiveInactiveClient()}"/>
 				
 				<h:outputText value="Reporte Consumo Promedio por Ciudad, Categoria y mes"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						action="#{executeReport.runReportGetAVGRentByCityCategoryAndMonth()}"/>
+						action="#{executeReportManagedBean.runReportGetAVGRentByCityCategoryAndMonth()}"/>
 		
 				<h:outputText value="Reporte Top 10 Peilculas Rentadas"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReport.runReportGetRentTopTen()}"/>
+						 action="#{executeReportManagedBean.runReportGetRentTopTen()}"/>
 				
 				<h:outputText value="Reporte Top 10 Clientes Consumo"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReport.runReportGetClientByTopTenRent()}"/>
+						 action="#{executeReportManagedBean.runReportGetClientByTopTenRent()}"/>
 				
 				<h:outputText value="Reporte Clientes con mas de una renta por semana"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReport.runReportGetClientRentsPerWeek()}"/>		
+						 action="#{executeReportManagedBean.runReportGetClientRentsPerWeek()}"/>		
 		
 				<h:outputText value="Reporte Ingresos generados por categoria"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReport.runReportGetEntryByCategory()}"/>
+						 action="#{executeReportManagedBean.runReportGetEntryByCategory()}"/>
 				
 				<h:outputText value="Reporte Peliculas rentadas por genero y mes"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReport.runReportGetMoviesByGenereAndMonth()}"/>
+						 action="#{executeReportManagedBean.runReportGetMoviesByGenereAndMonth()}"/>
 			
 			</p:panelGrid>
 		</h:form>	

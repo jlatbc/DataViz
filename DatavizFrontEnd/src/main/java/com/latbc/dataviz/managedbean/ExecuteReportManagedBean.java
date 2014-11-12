@@ -1,4 +1,4 @@
-package com.latbc.datavizfrontend.managedbean;
+package com.latbc.dataviz.managedbean;
 
 import java.sql.SQLException;
 

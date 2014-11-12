@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.sql.Timestamp;
-import java.util.Date;
 
 import com.latbc.dataviz.engines.JsonEngine;
 import com.latbc.dataviz.exceptions.DatabaseConnectionException;

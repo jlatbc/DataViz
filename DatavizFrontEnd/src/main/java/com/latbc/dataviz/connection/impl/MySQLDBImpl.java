@@ -23,13 +23,11 @@ public class MySQLDBImpl implements ConnectorDB {
 	Properties prop = new Properties();
 
 	public void createConnection(ConnectionBean connBean) {
+		
         try {
-
-//            String driver = connBean.getDriver();
             Class.forName(connBean.getDriver()
-            ).newInstance();
+            ).newInstance();	
             connection = DriverManager.getConnection(connBean.getUrl(),
-//            connection = DriverManager.getConnection("jdbc:mysql://"+ connBean.getUrl() + connBean.getDbName(),
                     connBean.getUser(),
                     connBean.getPassword());
         } catch (SQLException e) {
@@ -40,9 +38,10 @@ public class MySQLDBImpl implements ConnectorDB {
     }
 
 	public Connection getConnection() throws SQLException {
+		
 
 		try {
-			prop.load(new FileInputStream("src//main//resources//config.properties"));
+			prop.load(MySQLDBImpl.class.getResourceAsStream("/config.properties"));
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
