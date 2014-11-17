@@ -34,9 +34,6 @@ public class ExtractionEngine {
 		try {
 			ConnectorDB connMySQL = dbFactory.getConnection("MySQL");
 			statement = connMySQL.getConnection().createStatement();
-			// resultSet =
-			// statement.executeQuery("SELECT count(*) FROM CUSTOMER WHERE customer_id in (1,2)");
-
 			resultSet = statement
 					.executeQuery("SELECT re.rental_id, re.inventory_id, re.rental_date, "
 							+ "concat(cust.first_name, \" \",cust.last_name) AS NAME, cust.customer_id, f.title "
@@ -57,8 +54,7 @@ public class ExtractionEngine {
 		} finally {
 			resultSet.close();
 			statement.close();
-			// /PREGUNTAR A LUIS PORQUE NO PUEDO METER EL CLOSE CONNECTION EN EL
-			// FINALLY
+
 		}
 
 	}
