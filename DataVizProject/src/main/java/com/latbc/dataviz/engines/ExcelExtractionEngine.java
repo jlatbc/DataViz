@@ -43,7 +43,7 @@ public class ExcelExtractionEngine {
 			// Crea una instancia de Workbook
 			XSSFWorkbook workbook = new XSSFWorkbook(file);
 
-			// Obtiene la primer pestaña del workbook
+			// Obtiene la primer pestaï¿½a del workbook
 			XSSFSheet sheet = workbook.getSheetAt(0);
 
 			// Recorre las filas
@@ -95,7 +95,7 @@ public class ExcelExtractionEngine {
 			bw.flush();
 			bw.close();
 
-			System.out.println("File Created with BufferedWriter");
+			System.out.println("File Created with BufferedWriter EXCEL");
 
 		} catch (IOException e) {
 			e.printStackTrace();

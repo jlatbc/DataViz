@@ -18,8 +18,8 @@ public class TestDataVizQueryDisplayDAO {
 //			dataVizQuery.getRentTopTen();
 //			dataVizQuery.getClientByTopTenRent();
 //			dataVizQuery.getClientRentsPerWeek();
-//			dataVizQuery.getEntryByCategory();
-			dataVizQuery.getMoviesByGenereAndMonth();
+			dataVizQuery.getEntryByCategory();
+//			dataVizQuery.getMoviesByGenereAndMonth();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

@@ -13,7 +13,7 @@
 
 <br>
 <p:outputLabel value="URL:" />
-<p:inputText value="#{connectionManagedBean.+url}" ></p:inputText>
+<p:inputText value="#{connectionManagedBean.url}" ></p:inputText>
 </br>
 
 <br>
@@ -27,7 +27,7 @@
 </br>
 
 <br>
-<h:commandButton id="submitButton" value="Submit"/>
+<h:commandButton value="Submit" action="#{connectionManagedBean.loadProperties()}"/>
 </br>
 
 </h:body>
