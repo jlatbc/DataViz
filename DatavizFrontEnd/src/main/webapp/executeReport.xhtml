@@ -10,6 +10,8 @@
 	</h:head>
 	<h:body>
 		<h:form>
+		<!-- p:scrollPanel mode="native" style="width:200px;height:300px"> -->
+			<p>
 			<p:panelGrid columns="2">
 				
 				<h:outputText value="REPORTES-JSON"/>
@@ -17,33 +19,45 @@
 				
 				<h:outputText value="Reporte Clientes Activos"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;"
-						action="#{executeReportManagedBean.runReportGetActiveInactiveClient()}"/>
+						action="#{executeReport.runReportGetActiveInactiveClient()}"/>
 				
 				<h:outputText value="Reporte Consumo Promedio por Ciudad, Categoria y mes"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						action="#{executeReportManagedBean.runReportGetAVGRentByCityCategoryAndMonth()}"/>
+						action="#{executeReport.runReportGetAVGRentByCityCategoryAndMonth()}"/>
 		
 				<h:outputText value="Reporte Top 10 Peilculas Rentadas"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReportManagedBean.runReportGetRentTopTen()}"/>
+						 action="#{executeReport.runReportGetRentTopTen()}"/>
 				
 				<h:outputText value="Reporte Top 10 Clientes Consumo"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReportManagedBean.runReportGetClientByTopTenRent()}"/>
+						 action="#{executeReport.runReportGetClientByTopTenRent()}"/>
 				
 				<h:outputText value="Reporte Clientes con mas de una renta por semana"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReportManagedBean.runReportGetClientRentsPerWeek()}"/>		
+						 action="#{executeReport.runReportGetClientRentsPerWeek()}"/>		
 		
 				<h:outputText value="Reporte Ingresos generados por categoria"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReportManagedBean.runReportGetEntryByCategory()}"/>
+						 action="#{executeReport.runReportGetEntryByCategory()}"/>
 				
 				<h:outputText value="Reporte Peliculas rentadas por genero y mes"/>
 				<p:commandButton value="Ejecutar" style="width:100px; height:35px;" 
-						 action="#{executeReportManagedBean.runReportGetMoviesByGenereAndMonth()}"/>
+						 action="#{executeReport.runReportGetMoviesByGenereAndMonth()}"/>
 			
-			</p:panelGrid>
+			
+			</p:panelGrid> 
+			</p>
+			<!--</p:scrollPanel>-->
+			
+			<br/>
+			
+			<!--  p:button value="Upload json" onclick="window.open('uploadedFile.xhtml')"></p:button> -->
+			Cargar archivo json a D3, Seleccionar archivo:
+			<br/>
+			<p:fileUpload value="#{uploadFileView.file}" mode="simple" skinSimple="true"/>
+			
+			<p:commandButton/>
 		</h:form>	
 	</h:body>
 

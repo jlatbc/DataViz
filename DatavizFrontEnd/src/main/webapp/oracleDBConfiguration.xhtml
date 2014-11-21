@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:form>
+		<h3>Oracle DataBase Configuration</h3>
+		<br/>
+		<h:panelGrid id="grid" columns="2" cellpadding="5">
+			<p:outputLabel for="connectionName" value="Connection Name:" />
+			<p:inputText id="connectionName" value="#{oracleConnectionView.conncetionName}" />
+			
+			<p:outputLabel for="url" value="DataBase URL:" />
+			<p:inputText id="url" value="#{oracleConnectionView.url}" />
+			
+			<p:outputLabel for="user" value="User:" />
+			<p:inputText id="user" value="#{oracleConnectionView.user}" />
+			
+			<p:outputLabel for="password" value="Password:" />
+			<p:inputText id="password" value="#{oracleConnectionView.password}" />
+		</h:panelGrid>
+		<br/>
+		<h:panelGrid id="gridButton" columns="2" cellpadding="5">
+			<p:commandButton value="Test connection" id="btnTestConn" actionListener="#{oracleConnectionView.testConnection}"/>
+			<p:commandButton value="Save Configuration" id="btnSaveConf" actionListener="#{oracleConnectionView.saveConnection}"/>
+		</h:panelGrid>
+	</h:form>
+</html>
